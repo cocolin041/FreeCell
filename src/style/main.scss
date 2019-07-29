@@ -1,0 +1,148 @@
+#main {
+	z-index: 0;
+  background-image: url("../../public/assets/bg.png");
+  background-position: bottom;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 41px;
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-right: 63px;
+    .timer {
+      display: flex;
+			align-items: center;
+			> div {
+				margin: 0 7px;
+			}
+    }
+    .score {
+      display: flex;
+			align-items: baseline;
+			> div > img {
+				margin-right: 7.9px;
+			}
+    }
+  }
+  main {
+    .top-card-area {
+      display: flex;
+			justify-content: space-around;
+			margin: 30px 0 19px;
+      > div {
+        display: flex;
+        > div {
+          height: 145px;
+          width: 110px;
+          border-radius: 10px;
+          border: 2px solid rgba(237, 237, 237, 0.3);
+          margin: 0 12px;
+        }
+      }
+      #get-score-area {
+        > div {
+          position: relative;
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+			}
+		}
+		.deck-folder {
+			display: flex;
+			justify-content: center;
+			// height: 100vh;
+			> * {
+				margin: 50px 10px;
+			}
+			.container {
+				padding: 5px;
+				border: 1px solid white;
+				display: block;
+				:hover {
+					cursor: grab;
+				}
+				img {
+					&:hover {
+						cursor: default;
+					}
+				}
+			}
+		}
+		.bottom-card-area {
+			display: flex;
+		}
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    > * {
+      position: absolute;
+      bottom: 0;
+    }
+    .bg-JQK {
+      animation: zoomIn 1s;
+      animation-iteration-count: infinite;
+      z-index: 10;
+      left: 50%;
+      bottom: -50px;
+      transform-origin: left top;
+      width: 600px;
+      img {
+        width: 100%;
+      }
+      position: relative;
+      .quickly {
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1) translateX(-50%);
+      }
+      50% {
+        transform: scale(1.05) translateX(-50%);
+      }
+      100% {
+        transform: scale(1) translateX(-50%);
+      }
+    }
+    .bg-left,
+    .bg-right {
+      animation: shake 0.2s;
+      animation-iteration-count: infinite;
+      bottom: 0;
+      width: 800px;
+      img {
+        width: 100%;
+      }
+    }
+    .bg-left {
+      right: 0;
+    }
+    .bg-right {
+      left: 0;
+    }
+    @keyframes shake {
+      0% {
+        transform: translateX(5px);
+      }
+      50% {
+        transform: translateX(-5px);
+      }
+      100% {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
